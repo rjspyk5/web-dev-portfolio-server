@@ -7,10 +7,6 @@ require("dotenv").config();
 app.use(express.json());
 app.use(cors());
 
-app.get("/", (req, res) => {
-  res.send("test");
-});
-
 const { MongoClient, ServerApiVersion } = require("mongodb");
 const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.omgilvs.mongodb.net/?appName=Cluster0`;
 
@@ -32,9 +28,24 @@ async function run() {
     console.log(
       "Pinged your deployment. You successfully connected to MongoDB!"
     );
+
+    //Collection Names
+    const projectCollection = client
+      .db("rakibPortfolio")
+      .collection("projectCollection");
+
+    app.get("/", (req, res) => {
+      res.send("test");
+    });
+
+    app.get("/projects", async (req, res) => {
+      const result = await projectCollection.find().toArray();
+      console.log(result);
+      res.send(result);
+    });
   } finally {
     // Ensures that the client will close when you finish/error
-    await client.close();
+    // await client.close();
   }
 }
 run().catch(console.dir);
