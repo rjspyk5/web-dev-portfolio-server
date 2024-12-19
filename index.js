@@ -9,7 +9,7 @@ app.use(cors());
 const mongoose = require("mongoose");
 const connect = async () => await mongoose.connect(process.env.URI);
 
-console.log(connect());
+// console.log(connect());
 
 // const { MongoClient, ServerApiVersion } = require("mongodb");
 // const uri = process.env.URI;
