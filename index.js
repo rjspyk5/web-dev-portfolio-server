@@ -15,9 +15,11 @@ app.use(
 );
 connectDb();
 
-app.get("/", (req, res) => res.send("test"));
+// project Related Api
 app.post("/projects", projectControllar.uploadProjects);
 app.get("/projects", projectControllar.getProjects);
+app.delete("/projects", projectControllar.deleteProjects);
+app.put("/project/:id", projectControllar.updateProjects);
 
 app.listen(port, () => {
   console.log("server running");

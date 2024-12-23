@@ -1,6 +1,7 @@
 const {
   uploadProjectsModel,
   getAllProjects,
+  deleteProject,
 } = require("../model/projectModel");
 
 module.exports = {
@@ -13,5 +14,14 @@ module.exports = {
     const result = await getAllProjects();
     console.log(result);
     res.send(result);
+  },
+  deleteProjects: async (req, res) => {
+    const id = req.params.id;
+    const result = await deleteProject(id);
+    res.send(result);
+  },
+  updateProjects: async (req, res) => {
+    const id = req.params.id;
+    console.log(id);
   },
 };
