@@ -12,3 +12,7 @@ const projectSchema = new mongoose.Schema({
 });
 
 const projects = mongoose.model("projects", projectSchema);
+
+const uploadProjectsModel = async (data) => projects.create(data);
+
+module.exports = { uploadProjectsModel };
