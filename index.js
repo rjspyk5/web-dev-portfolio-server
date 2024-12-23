@@ -15,7 +15,9 @@ app.use(
 );
 connectDb();
 
+app.get("/", (req, res) => res.send("test"));
 app.post("/projects", projectControllar.uploadProjects);
+app.get("/projects", projectControllar.getProjects);
 
 app.listen(port, () => {
   console.log("server running");
