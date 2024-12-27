@@ -12,7 +12,6 @@ module.exports = {
   },
   getProjects: async (req, res) => {
     const result = await getAllProjects();
-    console.log(result);
     res.send(result);
   },
   deleteProjects: async (req, res) => {
@@ -22,6 +21,5 @@ module.exports = {
   },
   updateProjects: async (req, res) => {
     const id = req.params.id;
-    console.log(id);
   },
 };
