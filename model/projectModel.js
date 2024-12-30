@@ -12,7 +12,6 @@ const projectSchema = new mongoose.Schema({
 });
 
 const projects = mongoose.model("projects", projectSchema);
-
 const uploadProjectsModel = async (data) => await projects.create(data);
 const getAllProjects = async () => await projects.find();
 const deleteProject = async (id) => await projects.deleteOne({ _id: id });
