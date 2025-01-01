@@ -19,6 +19,7 @@ connectDb();
 // project Related Api
 app.post("/projects", projectControllar.uploadProjects);
 app.get("/projects", projectControllar.getProjects);
+app.get("/project/:id", projectControllar.getProject);
 app.delete("/projects", projectControllar.deleteProjects);
 app.put("/project/:id", projectControllar.updateProjects);
 // personal info

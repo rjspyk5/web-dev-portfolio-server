@@ -14,6 +14,12 @@ const projectSchema = new mongoose.Schema({
 const projects = mongoose.model("projects", projectSchema);
 const uploadProjectsModel = async (data) => await projects.create(data);
 const getAllProjects = async () => await projects.find();
+const getProject = async (id) => await projects.findOne({ _id: id });
 const deleteProject = async (id) => await projects.deleteOne({ _id: id });
 
-module.exports = { uploadProjectsModel, getAllProjects, deleteProject };
+module.exports = {
+  uploadProjectsModel,
+  getAllProjects,
+  deleteProject,
+  getProject,
+};
