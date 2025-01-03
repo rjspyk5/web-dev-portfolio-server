@@ -27,6 +27,7 @@ module.exports = {
   deleteProjects: async (req, res) => {
     const id = req.params.id;
     const result = await deleteProject(id);
+
     res.send(result);
   },
   updateProjects: async (req, res) => {

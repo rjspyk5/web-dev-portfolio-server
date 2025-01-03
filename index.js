@@ -20,7 +20,7 @@ connectDb();
 app.post("/project", projectControllar.uploadProjects);
 app.get("/projects", projectControllar.getProjects);
 app.get("/project/:id", projectControllar.getProject);
-app.delete("/projects", projectControllar.deleteProjects);
+app.delete("/project/:id", projectControllar.deleteProjects);
 app.put("/project/:id", projectControllar.updateProjects);
 // personal info
 app.get("/personaldetails", personalDetailsControllar.getPersonalInfo);
