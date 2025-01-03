@@ -17,7 +17,7 @@ app.use(
 connectDb();
 
 // project Related Api
-app.post("/projects", projectControllar.uploadProjects);
+app.post("/project", projectControllar.uploadProjects);
 app.get("/projects", projectControllar.getProjects);
 app.get("/project/:id", projectControllar.getProject);
 app.delete("/projects", projectControllar.deleteProjects);

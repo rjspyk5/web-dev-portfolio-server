@@ -3,12 +3,15 @@ const {
   getAllProjects,
   deleteProject,
   getProject,
+  updateProject,
 } = require("../model/projectModel");
 
 module.exports = {
   uploadProjects: async (req, res) => {
     const data = req?.body;
+
     const result = await uploadProjectsModel(data);
+
     res.send(result);
   },
   getProjects: async (req, res) => {
@@ -17,6 +20,7 @@ module.exports = {
   },
   getProject: async (req, res) => {
     const id = req.params.id;
+
     const result = await getProject(id);
     res.send(result);
   },
@@ -27,5 +31,8 @@ module.exports = {
   },
   updateProjects: async (req, res) => {
     const id = req.params.id;
+    const data = req?.body;
+    const result = await updateProject(id, data);
+    res.send(result);
   },
 };
