@@ -9,7 +9,7 @@ const personalDetailsControllar = require("./controllar/personalDetailsControlla
 app.use(express.json());
 app.use(
   cors({
-    origin: ["http://localhost:5173"],
+    origin: ["http://localhost:5173", "https://rakibulim.web.app"],
     credentials: true,
     optionSuccessStatus: 200,
   })
