@@ -5,6 +5,7 @@ const cors = require("cors");
 const connectDb = require("./config/config");
 const projectControllar = require("./controllar/projectControllar");
 const personalDetailsControllar = require("./controllar/personalDetailsControllar");
+const authControllar = require("./controllar/authControllar");
 
 app.use(express.json());
 app.use(
@@ -15,6 +16,8 @@ app.use(
   })
 );
 connectDb();
+// auth
+app.post("/login", authControllar.login);
 
 // project Related Api
 app.post("/project", projectControllar.uploadProjects);
