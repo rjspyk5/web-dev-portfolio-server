@@ -6,6 +6,7 @@ const connectDb = require("./config/config");
 const projectControllar = require("./controllar/projectControllar");
 const personalDetailsControllar = require("./controllar/personalDetailsControllar");
 const authControllar = require("./controllar/authControllar");
+const authMiddleware = require("./Middleware/authMiddleware");
 
 app.use(express.json());
 app.use(
