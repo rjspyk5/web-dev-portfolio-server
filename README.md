@@ -1,5 +1,5 @@
 -Will be change the mvc pattern to monolith modular pattern
 -have to change the frontend also
--relase date june 30,2026 or july 26
+-relase date june 30,2026 or july 26 or August 26
 -will change frontend backend both...and will be create on updated technologies
 -This project will entirely change to modular mvc pattern
