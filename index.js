@@ -11,7 +11,7 @@ const authMiddleware = require("./Middleware/authMiddleware");
 app.use(express.json());
 app.use(
   cors({
-    origin: ["http://localhost:5173", "https://rakibulim.web.app"],
+    origin: ["http://localhost:5173", "https://rakibulim.web.app","https://irakib.com"],
     credentials: true,
     optionSuccessStatus: 200,
   })
